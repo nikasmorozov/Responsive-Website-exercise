@@ -45,7 +45,7 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-image: url(/media/bg-masthead.jpg);
+    background-image: url(media/bg-masthead.jpg);
     background-position: center;
     background-size: cover; }
     body .signUpFirst h1 {
