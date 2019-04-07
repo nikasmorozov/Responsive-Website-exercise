@@ -1,3 +1,74 @@
-h2 {
-    color: rgb(57, 57, 163);
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+
+    p {
+        color: rgb(99, 99, 99);
+        font-weight: 300;
+    }
+
+    .nav {
+        background: rgb(245, 245, 245);
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+    }
+    
+    .signUpFirst {
+        margin-top: 30px;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(/media/bg-masthead.jpg);
+        background-position: center;
+        background-size: cover;
+    
+        h1 {
+            max-width: 80%;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+    }
+
+    .qualities {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+
+        .quality {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            .qualityIcon {
+                width: 50px;
+                height: 50px;
+                color: rgb(0, 124, 226);
+            }
+        }
+    }
+
+    .qualityDescription {
+        width: 100%;
+    }
 }
+
+div {
+    // border: 1px solid green;
+}
+
