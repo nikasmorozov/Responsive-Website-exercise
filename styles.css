@@ -99,7 +99,8 @@ body {
     body .qualityDescriptions .qualityDescription .qualityDescImg {
       width: 100%;
       height: 300px;
-      background-size: cover; }
+      background-size: cover;
+      background-position: center; }
     body .qualityDescriptions .qualityDescription #bg-showcase-1 {
       background-image: url("media/bg-showcase-1.jpg"); }
     body .qualityDescriptions .qualityDescription #bg-showcase-2 {
