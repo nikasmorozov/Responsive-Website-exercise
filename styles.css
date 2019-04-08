@@ -14,23 +14,40 @@ body {
   align-items: center;
   font-family: 'Lato', sans-serif;
   font-size: 13px; }
-  body p {
+  body p, body span {
     color: #636363;
     font-weight: 300; }
   body .nav {
     background: whitesmoke;
     width: 100%;
-    height: 30px;
+    height: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    position: fixed; }
+    position: fixed;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    body .nav span {
+      font-size: 1.5rem;
+      font-family: 'Lato', sans-serif;
+      margin-left: 20px; }
+    body .nav button {
+      border: none;
+      border-radius: 3px;
+      height: 30px;
+      font-size: 1rem;
+      font-family: 'Lato', sans-serif;
+      color: white;
+      background-color: #007ce2;
+      margin-right: 20px; }
   body .signUpFirst {
     margin-top: 30px;
-    height: 200px;
+    width: 100%;
+    height: 400px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -47,6 +64,26 @@ body {
     background-image: url("media/bg-masthead.jpg");
     background-position: center;
     background-size: cover; }
+    body .signUpFirst form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      width: 300px; }
+      body .signUpFirst form input {
+        border: none;
+        border-radius: 3px;
+        height: 30px;
+        font-size: 1rem;
+        margin-top: 10px;
+        font-family: 'Lato', sans-serif;
+        padding: 5px; }
+      body .signUpFirst form .submit {
+        color: white;
+        background-color: #007ce2; }
     body .signUpFirst h1 {
       max-width: 80%;
       text-align: center;
@@ -126,8 +163,8 @@ body {
       text-align: center;
       padding: 30px; }
       body .peopleSaying .personSaying .personImg {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         background: grey;
         border-radius: 50%;
         background-size: cover;
@@ -150,7 +187,7 @@ body {
         margin-top: 0; }
   body .signUpSecond {
     width: 100%;
-    height: 150px;
+    height: 250px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -168,7 +205,27 @@ body {
     background-position: center;
     background-size: cover; }
     body .signUpSecond h1 {
-      max-width: 80%;
+      max-width: 250px;
       text-align: center;
       color: white;
       font-size: 1.5rem; }
+    body .signUpSecond form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      width: 300px; }
+      body .signUpSecond form input {
+        border: none;
+        border-radius: 3px;
+        height: 30px;
+        font-size: 1rem;
+        margin-top: 10px;
+        font-family: 'Lato', sans-serif;
+        padding: 5px; }
+      body .signUpSecond form .submit {
+        color: white;
+        background-color: #007ce2; }
