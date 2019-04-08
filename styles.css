@@ -83,6 +83,9 @@ body {
         padding: 5px; }
       body .signUpFirst form .submit {
         color: white;
+        height: 40px;
+        font-size: 1rem;
+        margin-top: 10px;
         background-color: #007ce2; }
     body .signUpFirst h1 {
       max-width: 80%;
@@ -195,7 +198,7 @@ body {
       margin-top: 0; }
   body .signUpSecond {
     width: 100%;
-    height: 250px;
+    height: 300px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -239,6 +242,28 @@ body {
         background-color: #007ce2; }
 
 @media only screen and (min-width: 700px) {
+  body .signUpFirst h1 {
+    font-size: 2rem; }
+  body .signUpFirst form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%; }
+    body .signUpFirst form input {
+      margin-top: 0px;
+      margin: 10px;
+      min-width: 400px; }
+    body .signUpFirst form .submit {
+      margin-top: 0;
+      margin: 10px;
+      min-width: 100px; }
   body .qualities {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -308,5 +333,25 @@ body {
       flex-basis: 0; }
       .peopleSaying .personSaying .review {
         font-size: 0.8rem; }
-  .signUpSecond {
-    min-height: 300px; } }
+  .signUpSecond h1 {
+    font-size: 2rem; }
+  .signUpSecond form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%; }
+    .signUpSecond form input {
+      margin-top: 0px;
+      margin: 10px;
+      min-width: 400px; }
+    .signUpSecond form .submit {
+      margin-top: 0;
+      margin: 10px;
+      min-width: 100px; } }
