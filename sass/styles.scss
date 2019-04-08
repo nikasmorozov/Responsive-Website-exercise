@@ -103,11 +103,14 @@ body {
             }
 
             h3 {
+                font-size: 1.3rem;
                 margin-bottom: 10px;
             }
 
             p {
+                font-size: 1rem;
                 margin-top: 0;
+                max-width: 70%;
             }
         }
     }
@@ -119,6 +122,7 @@ body {
             display: flex;
             flex-direction: column;
             background-color: white;
+            align-items: center;
 
             .qualityDescImg {
                 width: 100%;
@@ -141,22 +145,30 @@ body {
             }
 
             .qualityDescText {
-                padding: 20px;
                 font-size: 1.1rem;
+
+
+                p, h2 {
+                    margin: 20px;
+                }
+
             }
 
         }
     }
 
+    .whatArePeopleSaying {
+        margin-top: 40px;
+    }
     .peopleSaying {
-        padding: 20px;
 
         .personSaying {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 30px;
+            margin-top: 10px;
+            margin-bottom: 50px;
 
             .personImg {
                 width: 150px;
@@ -239,4 +251,73 @@ body {
 div {
     // border: 1px solid green;
 }
+
+@media only screen and (min-width: 700px) {
+    body {
+      .qualities {
+        flex-direction: row;
+
+        .quality {
+            font-size: 1rem;
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+            .qualityIcon {
+                width: 70px;
+                height: 70px;
+            }
+        }
+      }
+
+        .qualityDescriptions {
+
+            .qualityDescription {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              flex-basis: auto;
+
+              .qualityDescImg {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+                height: 350px;
+            }
+
+              .qualityDescText {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+                font-size: 1rem;
+            }
+        }
+
+        .qualityDescription:nth-of-type(odd) {
+            flex-direction: row-reverse;
+        }
+      }
+    }
+
+    .peopleSaying {
+        display: flex;
+        justify-content: center;
+        flex-basis: 0;
+        margin-top: 10px;
+        margin-bottom: 30px;
+
+        .personSaying {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0;
+
+            .review {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .signUpSecond {
+        min-height: 300px;
+    }
+  }
 
