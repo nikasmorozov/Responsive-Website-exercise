@@ -288,6 +288,34 @@ div {
             }
         }
     }
+
+    .signUpTwo{
+
+        h1 {
+            font-size: 2rem;
+
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            
+            input {
+                margin-top: 0px;
+                margin: 10px;
+                min-width: 400px;
+            }
+
+            .submit {
+                margin-top: 0;
+                margin: 10px;
+                min-width: 100px;
+            }
+        }
+    }
+    
     .qualities {
         flex-direction: row;
 
@@ -346,34 +374,6 @@ div {
 
             .review {
                 font-size: 0.8rem;
-            }
-        }
-    }
-    
-
-    .signUpTwo{
-
-        h1 {
-            font-size: 2rem;
-
-        }
-
-        form {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            width: 100%;
-            
-            input {
-                margin-top: 0px;
-                margin: 10px;
-                min-width: 400px;
-            }
-
-            .submit {
-                margin-top: 0;
-                margin: 10px;
-                min-width: 100px;
             }
         }
     }
