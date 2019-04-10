@@ -1,7 +1,11 @@
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(0, 124, 226);
+$font-grey: rgb(99, 99, 99);
+
 body {
     margin: 0;
     padding: 0;
-    background: rgb(240, 240, 240);
+    background: $primary-color;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,13 +13,13 @@ body {
     font-size: 13px;
 
     p, span {
-        color: rgb(99, 99, 99);
+        color: $font-grey;
         font-weight: 300;
     }
 
     .nav {
-        background: rgb(245, 245, 245);
-        width: 100%;
+        background: $primary-color;
+        width: 100vw;
         height: 50px;
         display: flex;
         justify-content: space-between;
@@ -35,7 +39,7 @@ body {
             font-size: 1rem;
             font-family: 'Lato', sans-serif;
             color: white;
-            background-color: rgb(0, 124, 226);
+            background-color: $secondary-color;
             margin-right: 20px;
         }
     }
@@ -54,22 +58,24 @@ body {
         transform: translateY(-40px);
         width: 30px;
         height: 30px;
-        background: rgb(0, 124, 226);
-        border-radius: 3px;
       }
 
     .navToggle {
         position: fixed;
         margin-top: 50px;
-        display: none;
+        display: flex;
         text-align: center;
         justify-content: center;
         align-items: center;
-        background: rgb(0, 124, 226);
-        width: 100%;
-        height: calc(100vh - 50px);
+        background: $secondary-color;
+        width: 100vw;
+        height: 0;
+        overflow: hidden;
         flex-direction: column;
         justify-content: center;
+        transition: all 0.5s ease;
+        overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
         
 
         a {
@@ -83,11 +89,15 @@ body {
     }
 
     input[type=checkbox]:checked ~ .navToggle {
-        display: flex;
-      }
+        height: calc(100vh - 50px);
+    }
+
+    input[type=checkbox]:checked ~ label .toggleIcon {
+        color: red;
+    }
     
-    .signUpFirst {
-        width: 100%;
+    .signUpBlock {
+        width: 100vw;
         height: 400px;
         display: flex;
         flex-direction: column;
@@ -101,6 +111,13 @@ body {
             display: flex;
             flex-direction: column;
             width: 300px;
+
+            @media only screen and (min-width: 700px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+            }
             
             
             input {
@@ -111,6 +128,12 @@ body {
                 margin-top: 10px;
                 font-family: 'Lato', sans-serif;
                 padding: 5px;
+
+                @media only screen and (min-width: 700px) {
+                    margin-top: 0px;
+                    margin: 10px;
+                    min-width: 400px;
+                }
             }
 
             .submit {
@@ -118,7 +141,13 @@ body {
                 height: 40px;
                 font-size: 1rem;
                 margin-top: 10px;
-                background-color: rgb(0, 124, 226);
+                background-color: $secondary-color;
+
+                @media only screen and (min-width: 700px) {
+                    margin-top: 0;
+                    margin: 10px;
+                    min-width: 100px;
+                }
             }
         }
     
@@ -130,12 +159,19 @@ body {
         }
     }
 
+    .signUpBlock:last-of-type {
+        height: 250px;
+    }
+
     .qualities {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 20px;
+        @media only screen and (min-width: 700px) {
+            flex-direction: row;
+        }
 
         .quality {
             display: flex;
@@ -144,10 +180,22 @@ body {
             justify-content: space-around;
             margin-top: 30px;
 
+            @media only screen and (min-width: 700px) {
+                font-size: 1rem;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                min-height: 230px;
+            }
+
             .qualityIcon {
                 width: 50px;
                 height: 50px;
-                color: rgb(0, 124, 226);
+                color: $secondary-color;
+
+                @media only screen and (min-width: 700px) {
+                    width: 70px;
+                    height: 70px;
+                }
             }
 
             h3 {
@@ -171,12 +219,27 @@ body {
             flex-direction: column;
             background-color: white;
             align-items: center;
+            width: 100vw;
+
+            @media only screen and (min-width: 700px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-basis: auto;
+            }
 
             .qualityDescImg {
                 width: 100%;
                 height: 300px;
                 background-size: cover;
                 background-position: center;
+
+                @media only screen and (min-width: 700px) {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 0;
+                    height: 350px;
+                }
             }
     
             #bg-showcase-1 {
@@ -195,6 +258,13 @@ body {
             .qualityDescText {
                 font-size: 1.1rem;
 
+                @media only screen and (min-width: 700px) {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 0;
+                    font-size: 1rem;
+                }
+
 
                 p, h2 {
                     margin: 20px;
@@ -202,13 +272,32 @@ body {
 
             }
 
+            
+
+        }
+
+        @media only screen and (min-width: 700px) {
+            .qualityDescription:nth-of-type(odd) {
+                flex-direction: row-reverse;
+            }
+            
         }
     }
+
+    
 
     .whatArePeopleSaying {
         margin-top: 40px;
     }
     .peopleSaying {
+
+        @media only screen and (min-width: 700px) {
+            display: flex;
+            justify-content: center;
+            flex-basis: 0;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
 
         .personSaying {
             display: flex;
@@ -217,6 +306,10 @@ body {
             text-align: center;
             margin-top: 10px;
             margin-bottom: 50px;
+            // Nezinau ar reikia rasyti cia ar i media querry 
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0;
 
             .personImg {
                 width: 150px;
@@ -239,6 +332,12 @@ body {
                 background-image: url('media/testimonials-3.jpg')
             }
 
+            .review {
+                @media only screen and (min-width: 700px) {
+                    font-size: 0.8rem;
+                }
+            }
+
             h4 {
                 margin: 0;
                 margin-top: 20px;
@@ -253,175 +352,8 @@ body {
             }
         }
     }
-
-    .signUpTwo{
-        margin-top: 30px;
-        width: 100%;
-        height: 250px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-image: url('media/bg-masthead.jpg');
-        background-position: center;
-        background-size: cover;
-
-        form {
-            display: flex;
-            flex-direction: column;
-            width: 300px;
-            
-            
-            input {
-                border: none;
-                border-radius: 3px;
-                height: 30px;
-                font-size: 1rem;
-                margin-top: 10px;
-                font-family: 'Lato', sans-serif;
-                padding: 5px;
-            }
-
-            .submit {
-                color: white;
-                height: 40px;
-                font-size: 1rem;
-                margin-top: 10px;
-                background-color: rgb(0, 124, 226);
-            }
-        }
-    
-        h1 {
-            max-width: 80%;
-            text-align: center;
-            color: white;
-            font-size: 1.5rem;
-        }
-    }
 }
 
 div {
     // border: 1px solid green;
 }
-
-@media only screen and (min-width: 700px) {
-    body {
-
-    .signUpFirst {
-
-        h1 {
-            font-size: 2rem;
-
-        }
-
-        form {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            width: 100%;
-            
-            input {
-                margin-top: 0px;
-                margin: 10px;
-                min-width: 400px;
-            }
-
-            .submit {
-                margin-top: 0;
-                margin: 10px;
-                min-width: 100px;
-            }
-        }
-    }
-
-    .signUpTwo{
-
-        h1 {
-            font-size: 2rem;
-
-        }
-
-        form {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            width: 100%;
-            
-            input {
-                margin-top: 0px;
-                margin: 10px;
-                min-width: 400px;
-            }
-
-            .submit {
-                margin-top: 0;
-                margin: 10px;
-                min-width: 100px;
-            }
-        }
-    }
-
-    .qualities {
-        flex-direction: row;
-
-        .quality {
-            font-size: 1rem;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            min-height: 230px;
-
-            .qualityIcon {
-                width: 70px;
-                height: 70px;
-            }
-        }
-      }
-
-        .qualityDescriptions {
-
-            .qualityDescription {
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              flex-basis: auto;
-
-              .qualityDescImg {
-                flex-grow: 1;
-                flex-shrink: 1;
-                flex-basis: 0;
-                height: 350px;
-            }
-
-              .qualityDescText {
-                flex-grow: 1;
-                flex-shrink: 1;
-                flex-basis: 0;
-                font-size: 1rem;
-            }
-        }
-
-        .qualityDescription:nth-of-type(odd) {
-            flex-direction: row-reverse;
-        }
-      }
-    }
-
-    .peopleSaying {
-        display: flex;
-        justify-content: center;
-        flex-basis: 0;
-        margin-top: 10px;
-        margin-bottom: 30px;
-
-        .personSaying {
-            flex-grow: 1;
-            flex-shrink: 1;
-            flex-basis: 0;
-
-            .review {
-                font-size: 0.8rem;
-            }
-        }
-    }
-  }
-
