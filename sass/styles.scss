@@ -58,6 +58,7 @@ body {
         transform: translateY(-40px);
         width: 30px;
         height: 30px;
+        color: $secondary-color;
       }
 
     .navToggle {
@@ -93,7 +94,7 @@ body {
     }
 
     input[type=checkbox]:checked ~ label .toggleIcon {
-        color: red;
+        color: black;
     }
     
     .signUpBlock {
